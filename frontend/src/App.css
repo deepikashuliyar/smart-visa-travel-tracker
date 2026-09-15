@@ -1,0 +1,9920 @@
+/* =========================================================
+   SMART VISA TRACKER - APP STYLES
+   Professional dashboard + documents + reminders + travel
+   ========================================================= */
+
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    height: 90px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 42px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.navbar-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logout-button {
+    border: 1px solid #94a3b8;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #f1f5f9;
+}
+
+
+/* =========================
+   MAIN APPLICATION LAYOUT
+   ========================= */
+
+.app-layout {
+    min-height: calc(100vh - 90px);
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    background: #f1f5f9;
+    padding: 40px 44px;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    width: 325px;
+    min-width: 325px;
+    min-height: calc(100vh - 90px);
+    background: #0f172a;
+    color: white;
+    padding: 0 20px 30px;
+}
+
+.sidebar-brand {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 0 15px;
+}
+
+.sidebar a,
+.sidebar-link {
+    display: block;
+    color: #e2e8f0;
+    padding: 14px 16px;
+    margin: 3px 0;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar-link:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.sidebar a.active,
+.sidebar-link.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+/* =========================
+   COMMON PAGE HEADER
+   ========================= */
+
+.documents-header,
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 34px;
+}
+
+.documents-header h1,
+.page-header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.documents-header p,
+.page-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   COMMON BUTTONS
+   ========================= */
+
+.primary-button,
+.add-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 14px;
+    padding: 13px 22px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.primary-button:hover,
+.add-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.secondary-button {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-weight: 600;
+}
+
+.secondary-button:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   FORMS
+   ========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   MESSAGES
+   ========================= */
+
+.error-message {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.dashboard-welcome {
+    background: linear-gradient(135deg, #0f172a, #172554);
+    border-radius: 22px;
+    padding: 34px;
+    color: white;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.dashboard-welcome-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.dashboard-button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-weight: 700;
+}
+
+.dashboard-button:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.dashboard-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.dashboard-kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-kpi-card h3 {
+    margin: 0 0 10px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dashboard-kpi-card strong {
+    display: block;
+    color: #0f172a;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.dashboard-main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 22px;
+}
+
+.dashboard-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard-card h2 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 21px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+}
+
+.dashboard-alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dashboard-alert {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.dashboard-reminders {
+    margin-top: 22px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.status-valid {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-warning {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-expired {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   DOCUMENTS
+   ========================================================= */
+
+.documents-page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.document-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.document-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.document-card h3 {
+    margin: 0;
+    color: #0f172a;
+}
+
+.document-card p {
+    color: #64748b;
+}
+
+.document-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.document-upload-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   PASSPORT / VISA / INSURANCE / VACCINATION CARDS
+   ========================================================= */
+
+.document-page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.document-record-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.document-record-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.document-record-title {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.document-record-subtitle {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.document-record-details {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 22px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.document-detail-label {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.document-detail-value {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.document-record-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.edit-button {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 10px;
+    padding: 10px 17px;
+    font-weight: 700;
+}
+
+.edit-button:hover {
+    background: #dbeafe;
+}
+
+.delete-button {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+    border-radius: 10px;
+    padding: 10px 17px;
+    font-weight: 700;
+}
+
+.delete-button:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================================
+   REMINDERS PAGE
+   ========================================================= */
+
+.reminders-page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.reminder-form-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-form-card h2 {
+    margin: 0 0 20px;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.reminder-form-card form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.reminder-form-card .form-group:first-child {
+    grid-column: span 2;
+}
+
+.reminder-form-card .form-group:nth-child(2) {
+    grid-column: span 2;
+}
+
+.reminder-submit-button {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+
+.reminder-submit-button:hover {
+    background: #1d4ed8;
+}
+
+.reminder-cancel-button {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+
+.reminder-cancel-button:hover {
+    background: #f8fafc;
+}
+
+.reminders-section {
+    margin-bottom: 30px;
+}
+
+.reminders-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.reminders-section-header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 23px;
+}
+
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.reminder-page-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 23px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    transition: 0.2s ease;
+}
+
+.reminder-page-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 9px 24px rgba(15, 23, 42, 0.07);
+}
+
+.reminder-page-card.completed {
+    opacity: 0.75;
+}
+
+.reminder-page-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.reminder-page-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 15px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.reminder-page-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.reminder-page-content h3 {
+    margin: 0 0 5px;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.reminder-page-content p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.55;
+}
+
+.reminder-date {
+    margin-top: 10px !important;
+    color: #334155 !important;
+    font-weight: 600;
+}
+
+.reminder-type-badge {
+    display: inline-flex;
+    margin-top: 10px;
+    background: #f1f5f9;
+    color: #475569;
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.reminder-completed-badge {
+    display: inline-flex;
+    margin-left: 7px;
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.reminder-page-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 18px;
+    padding-left: 76px;
+}
+
+.reminder-action-button {
+    border-radius: 9px;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.reminder-complete-button {
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.reminder-complete-button:hover {
+    background: #dcfce7;
+}
+
+.reminder-edit-button {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.reminder-edit-button:hover {
+    background: #dbeafe;
+}
+
+.reminder-delete-button {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.reminder-delete-button:hover {
+    background: #fee2e2;
+}
+
+.reminder-empty-state {
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.reminder-empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.reminder-empty-state h3 {
+    margin: 0 0 7px;
+    color: #0f172a;
+}
+
+.reminder-empty-state p {
+    margin: 0;
+    color: #64748b;
+}
+
+
+/* =========================
+   REMINDER PREFERENCES
+   ========================= */
+
+.reminder-preferences {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-preferences h2 {
+    margin: 0 0 7px;
+    color: #0f172a;
+}
+
+.reminder-preferences > p {
+    margin: 0 0 22px;
+    color: #64748b;
+}
+
+.reminder-preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.reminder-preference-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    background: #f8fafc;
+}
+
+.reminder-preference-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: #2563eb;
+}
+
+.reminder-preference-item label {
+    color: #334155;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reminder-save-button {
+    margin-top: 18px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 21px;
+    font-weight: 700;
+}
+
+.reminder-save-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   TRAVEL HISTORY
+   ========================================================= */
+
+.travel-history-page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.travel-history-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.travel-history-header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.travel-history-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 17px;
+}
+
+.travel-history-form {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.travel-history-form h2 {
+    margin: 0 0 21px;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.travel-history-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.travel-history-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.travel-history-field.full-width {
+    grid-column: span 2;
+}
+
+.travel-history-field label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.travel-history-field input,
+.travel-history-field textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+}
+
+.travel-history-field input:focus,
+.travel-history-field textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.travel-history-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.travel-history-form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.travel-primary-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 21px;
+    font-weight: 700;
+}
+
+.travel-primary-button:hover {
+    background: #1d4ed8;
+}
+
+.travel-secondary-button {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 10px;
+    padding: 12px 21px;
+    font-weight: 700;
+}
+
+.travel-secondary-button:hover {
+    background: #f8fafc;
+}
+
+.travel-history-section {
+    margin-bottom: 30px;
+}
+
+.travel-history-section-header {
+    margin-bottom: 17px;
+}
+
+.travel-history-section-header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 23px;
+}
+
+.travel-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.travel-history-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    transition: 0.2s ease;
+}
+
+.travel-history-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 9px 24px rgba(15, 23, 42, 0.07);
+}
+
+.travel-history-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.travel-country-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 15px;
+    background: #fff7ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.travel-country {
+    margin: 0;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.travel-purpose {
+    display: inline-flex;
+    margin-top: 7px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 999px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.travel-history-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 9px;
+}
+
+.travel-edit-button {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 9px;
+    padding: 9px 15px;
+    font-weight: 700;
+}
+
+.travel-edit-button:hover {
+    background: #dbeafe;
+}
+
+.travel-delete-button {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+    border-radius: 9px;
+    padding: 9px 15px;
+    font-weight: 700;
+}
+
+.travel-delete-button:hover {
+    background: #fee2e2;
+}
+
+.travel-history-details {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 21px;
+    padding-top: 19px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding-left: 75px;
+}
+
+.travel-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.travel-detail span:first-child {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.travel-detail span:last-child {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.travel-notes {
+    grid-column: span 2;
+    color: #475569 !important;
+    line-height: 1.6;
+    font-weight: 500 !important;
+}
+
+.travel-empty-state {
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.travel-empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.travel-empty-state h3 {
+    margin: 0 0 7px;
+    color: #0f172a;
+}
+
+.travel-empty-state p {
+    margin: 0;
+    color: #64748b;
+}
+
+
+/* =========================================================
+   ADMIN
+   ========================================================= */
+
+.admin-page,
+.admin-dashboard {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.admin-stat-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 18px;
+    padding: 23px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.admin-stat-card h3 {
+    margin: 0 0 9px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.admin-stat-card strong {
+    color: #0f172a;
+    font-size: 30px;
+}
+
+.admin-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.admin-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 19px;
+    padding: 25px;
+    color: #0f172a;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+    transition: 0.2s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-2px);
+    border-color: #bfdbfe;
+    box-shadow: 0 9px 25px rgba(15, 23, 42, 0.07);
+}
+
+.admin-card h2 {
+    margin: 0 0 7px;
+}
+
+.admin-card p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.admin-table-container {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 18px;
+    overflow-x: auto;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-table td {
+    padding: 16px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.admin-role-badge,
+.user-role-badge {
+    display: inline-flex;
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.admin-role-badge {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.user-role-badge {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.admin-empty-state {
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 50px;
+    text-align: center;
+}
+
+.admin-empty-state h3 {
+    color: #0f172a;
+    margin: 0 0 7px;
+}
+
+.admin-empty-state p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER / LANDING
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+.auth-card h1 {
+    margin: 0 0 8px;
+    color: #0f172a;
+}
+
+.auth-card p {
+    color: #64748b;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.auth-button {
+    width: 100%;
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 13px;
+    font-weight: 700;
+}
+
+.auth-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 250px;
+        min-width: 250px;
+    }
+
+    .main-content {
+        padding: 32px;
+    }
+
+    .dashboard-kpi-grid,
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    .documents-grid,
+    .admin-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-record-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .travel-history-details {
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .navbar {
+        height: 72px;
+        padding: 0 18px;
+    }
+
+    .navbar-brand,
+    .navbar-logo {
+        font-size: 20px;
+    }
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .sidebar-brand {
+        display: none;
+    }
+
+    .sidebar a,
+    .sidebar-link {
+        display: inline-block;
+        margin: 3px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 22px 16px;
+    }
+
+    .documents-header,
+    .page-header,
+    .travel-history-header {
+        flex-direction: column;
+    }
+
+    .documents-header h1,
+    .page-header h1,
+    .travel-history-header h1 {
+        font-size: 29px;
+    }
+
+    .dashboard-kpi-grid,
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 26px;
+    }
+
+    .document-record-details {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-form-card,
+    .travel-history-form,
+    .reminder-preferences {
+        padding: 21px;
+    }
+
+    .reminder-form-card form,
+    .travel-history-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-form-card .form-group:first-child,
+    .reminder-form-card .form-group:nth-child(2),
+    .travel-history-field.full-width {
+        grid-column: span 1;
+    }
+
+    .reminder-page-card-top,
+    .travel-history-card-top {
+        flex-direction: column;
+    }
+
+    .reminder-page-actions {
+        padding-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .travel-history-actions {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .travel-history-details {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
+    .travel-notes {
+        grid-column: span 1;
+    }
+
+    .reminder-preferences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions,
+    .travel-history-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .reminder-submit-button,
+    .reminder-cancel-button,
+    .travel-primary-button,
+    .travel-secondary-button {
+        width: 100%;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        white-space: nowrap;
+    }
+}
+/* =========================================================
+   FINAL REMINDERS + TRAVEL HISTORY UI FIX
+   Matches the Vaccinations page design
+   ========================================================= */
+
+/* =========================
+   REMINDERS
+   ========================= */
+
+.reminders-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reminder-form-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-form-card h2 {
+    margin: 0 0 24px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.reminder-form-card form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reminder-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.reminder-form-card .form-group:nth-child(1),
+.reminder-form-card .form-group:nth-child(2) {
+    grid-column: span 2;
+}
+
+.reminder-form-card label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.reminder-form-card input,
+.reminder-form-card textarea,
+.reminder-form-card select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    outline: none;
+}
+
+.reminder-form-card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.reminder-form-card input:focus,
+.reminder-form-card textarea:focus,
+.reminder-form-card select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.reminder-form-card .form-actions {
+    grid-column: span 2;
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.reminder-form-card .form-actions button:first-child {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+}
+
+.reminder-form-card .form-actions button:first-child:hover {
+    background: #1d4ed8;
+}
+
+.reminder-form-card .form-actions button:last-child {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+}
+
+
+/* Reminder list */
+
+.reminders-section {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.reminders-section > h2 {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 18px;
+}
+
+.reminders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.reminder-item {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-item .reminder-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.reminder-item .reminder-actions button {
+    border-radius: 9px;
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.reminder-item .reminder-actions button:first-child {
+    border: 1px solid #bbf7d0;
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.reminder-item .reminder-actions button:nth-child(2) {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.reminder-item .reminder-actions button:last-child {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+
+/* Reminder preferences */
+
+.reminder-preferences-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-preferences-card h2 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 23px;
+}
+
+.reminder-preferences-card p {
+    color: #64748b;
+}
+
+.reminder-preferences-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.preference-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.preference-option input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #2563eb;
+}
+
+.preference-option strong {
+    display: block;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.preference-option span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.reminder-preferences-actions {
+    margin-top: 20px;
+}
+
+.reminder-preferences-actions button {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+}
+
+.reminder-preferences-actions button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   TRAVEL HISTORY
+   ========================= */
+
+.travel-history-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.travel-form-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 22px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.travel-form-card h2 {
+    margin: 0 0 24px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.travel-form-card form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.travel-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.travel-form-card .form-group:last-of-type {
+    grid-column: span 2;
+}
+
+.travel-form-card label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.travel-form-card input,
+.travel-form-card textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    outline: none;
+}
+
+.travel-form-card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.travel-form-card input:focus,
+.travel-form-card textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.travel-form-card .form-actions {
+    grid-column: span 2;
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.travel-form-card .form-actions button:first-child {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+}
+
+.travel-form-card .form-actions button:first-child:hover {
+    background: #1d4ed8;
+}
+
+.travel-form-card .form-actions button:last-child {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+}
+
+
+/* Travel history list */
+
+.travel-history-section {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.travel-history-section > h2 {
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 18px;
+}
+
+.travel-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.travel-card {
+    background: #ffffff;
+    border: 1px solid #dbe4ef;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.travel-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+}
+
+.travel-card-header h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.travel-card-header span {
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.travel-card > p {
+    color: #334155;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.travel-card > p strong {
+    color: #64748b;
+}
+
+.travel-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.travel-actions button:first-child {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 9px;
+    padding: 9px 17px;
+    font-weight: 700;
+}
+
+.travel-actions button:last-child {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #dc2626;
+    border-radius: 9px;
+    padding: 9px 17px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   MESSAGES
+   ========================= */
+
+.success-message {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .reminder-form-card,
+    .travel-form-card {
+        padding: 21px;
+    }
+
+    .reminder-form-card form,
+    .travel-form-card form {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-form-card .form-group:nth-child(1),
+    .reminder-form-card .form-group:nth-child(2),
+    .travel-form-card .form-group:last-of-type,
+    .reminder-form-card .form-actions,
+    .travel-form-card .form-actions {
+        grid-column: span 1;
+    }
+
+    .reminder-preferences-options {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-card-header {
+        flex-direction: column;
+    }
+
+    .travel-actions,
+    .reminder-actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    height: 68px;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+
+    position: relative;
+    z-index: 100;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #171d4d;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.navbar-brand-text strong {
+    color: #0f172a;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.navbar-brand-text span {
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.navbar-logout:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+.logout-icon {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.navbar-logout:hover .logout-icon {
+    transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 62px;
+        padding: 0 16px;
+    }
+
+    .navbar-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .navbar-brand-text strong {
+        font-size: 14px;
+    }
+
+    .navbar-brand-text span {
+        font-size: 10px;
+    }
+
+    .navbar-logout {
+        padding: 8px 11px;
+    }
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 245px;
+    min-width: 245px;
+
+    min-height: calc(100vh - 68px);
+
+    padding: 22px 14px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e2e8f0;
+
+    position: sticky;
+    top: 68px;
+
+    align-self: flex-start;
+}
+
+.sidebar-heading {
+    padding: 0 12px;
+    margin: 3px 0 10px;
+}
+
+.sidebar-heading span {
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 42px;
+
+    padding: 9px 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 9px;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #f8fafc;
+    color: #334155;
+}
+
+.sidebar-link.active {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sidebar-link.active .sidebar-icon {
+    background: #e0e7ff;
+}
+
+.sidebar-divider {
+    height: 1px;
+
+    margin: 16px 10px;
+
+    background: #e2e8f0;
+}
+
+.admin-link {
+    margin-top: 2px;
+}
+
+
+/* =========================
+   MOBILE SIDEBAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 210px;
+        min-width: 210px;
+    }
+
+    .sidebar-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        position: relative;
+        top: auto;
+
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+
+        padding: 12px;
+    }
+
+    .sidebar-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .sidebar-heading {
+        margin-top: 5px;
+    }
+
+    .sidebar-divider {
+        grid-column: 1 / -1;
+        margin: 8px 5px;
+    }
+}
+
+/* =========================================================
+   DOCUMENT PAGES
+========================================================= */
+
+.documents-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.documents-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-document-button {
+    border: none;
+    background: #4f46e5;
+    color: #ffffff;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-document-button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   PASSPORT CARD
+========================= */
+
+.passport-section {
+    margin-top: 10px;
+}
+
+.passport-card-wrapper {
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111936 0%,
+            #1c2552 55%,
+            #252d60 100%
+        );
+
+    border-radius: 18px;
+
+    min-height: 270px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.16);
+}
+
+.passport-card-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.passport-card-icon {
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-size: 55px;
+}
+
+.passport-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 30px 32px;
+}
+
+.passport-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.passport-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a5b4fc;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.passport-card-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.document-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.document-status.valid {
+    background: rgba(52, 211, 153, 0.16);
+    color: #6ee7b7;
+}
+
+.document-status.warning {
+    background: rgba(251, 191, 36, 0.16);
+    color: #fcd34d;
+}
+
+.document-status.critical {
+    background: rgba(251, 146, 60, 0.16);
+    color: #fdba74;
+}
+
+.document-status.expired {
+    background: rgba(251, 113, 133, 0.16);
+    color: #fda4af;
+}
+
+.passport-card-details {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.passport-card-details span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.passport-card-details strong {
+    color: #f8fafc;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.passport-card-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.edit-document-button,
+.delete-document-button {
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.edit-document-button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.edit-document-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.delete-document-button {
+    border: 1px solid rgba(251, 113, 133, 0.25);
+
+    background: rgba(251, 113, 133, 0.08);
+
+    color: #fda4af;
+}
+
+.delete-document-button:hover {
+    background: rgba(251, 113, 133, 0.16);
+}
+
+
+/* =========================
+   DOCUMENT FORM
+========================= */
+
+.document-form-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+}
+
+.document-form-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.document-form-header h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 20px;
+}
+
+.document-form-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.form-close-button {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+.form-close-button:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.document-form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.cancel-button,
+.save-document-button {
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+
+    color: #475569;
+}
+
+.cancel-button:hover {
+    background: #f8fafc;
+}
+
+.save-document-button {
+    border: none;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+}
+
+.save-document-button:hover {
+    background: #4338ca;
+}
+
+
+/* =========================
+   EMPTY DOCUMENT STATE
+========================= */
+
+.documents-empty-state {
+    background: #ffffff;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    padding: 65px 25px;
+
+    text-align: center;
+}
+
+.documents-empty-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 16px;
+
+    background: #eef2ff;
+
+    font-size: 27px;
+}
+
+.documents-empty-state h2 {
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 20px;
+}
+
+.documents-empty-state p {
+    max-width: 500px;
+
+    margin: 0 auto 22px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .passport-card-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .passport-card-icon {
+        width: 100px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .documents-header {
+        align-items: flex-start;
+    }
+
+    .documents-header-actions {
+        width: 100%;
+    }
+
+    .add-document-button {
+        width: 100%;
+    }
+
+    .passport-card-wrapper {
+        flex-direction: column;
+    }
+
+    .passport-card-icon {
+        width: 100%;
+        height: 90px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .passport-card-main {
+        padding: 24px 20px;
+    }
+
+    .passport-card-top {
+        flex-direction: column;
+    }
+
+    .passport-card-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-button,
+    .save-document-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   VISA PAGE
+========================================================= */
+
+.visa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visa-card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #111936 0%,
+        #1c2552 55%,
+        #252d60 100%
+    );
+
+    border-radius: 18px;
+
+    min-height: 250px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.visa-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.20);
+}
+
+.visa-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -90px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.visa-card-icon {
+    width: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+
+    font-size: 48px;
+}
+
+.visa-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 30px;
+}
+
+.visa-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.visa-card-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #a5b4fc;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.visa-card-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.visa-type-text {
+    margin: 5px 0 0;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.visa-card-details {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    padding: 19px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.visa-card-details span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.visa-card-details strong {
+    color: #f8fafc;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.visa-card-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   VISA STATUS
+========================================================= */
+
+.document-status.cancelled {
+    background: rgba(148, 163, 184, 0.16);
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   VISA RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .visa-card-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .visa-card-icon {
+        width: 100px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .visa-card {
+        flex-direction: column;
+    }
+
+    .visa-card-icon {
+        width: 100%;
+        height: 85px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .visa-card-main {
+        padding: 24px 20px;
+    }
+
+    .visa-card-top {
+        flex-direction: column;
+    }
+
+    .visa-card-details {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 18px 12px;
+    }
+
+    .visa-card-actions {
+        flex-direction: column;
+    }
+
+    .edit-document-button,
+    .delete-document-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   VACCINATION PAGE
+========================================================= */
+
+.vaccination-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vaccination-card {
+    position: relative;
+
+    display: flex;
+
+    overflow: hidden;
+
+    min-height: 275px;
+
+    background: linear-gradient(
+        135deg,
+        #111936 0%,
+        #1c2552 55%,
+        #252d60 100%
+    );
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.vaccination-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.20);
+}
+
+.vaccination-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vaccination-card-icon {
+    width: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+
+    font-size: 48px;
+}
+
+.vaccination-card-main {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 30px;
+}
+
+.vaccination-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.vaccination-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a5b4fc;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.vaccination-card-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.vaccination-certificate-text {
+    margin: 5px 0 0;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.vaccination-card-details {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 19px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.vaccination-card-details span,
+.vaccination-validity span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.vaccination-card-details strong,
+.vaccination-validity strong {
+    color: #f8fafc;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.vaccination-validity {
+    padding-top: 17px;
+}
+
+.vaccination-card-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   VACCINATION RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .vaccination-card-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vaccination-card-icon {
+        width: 105px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .vaccination-card {
+        flex-direction: column;
+    }
+
+    .vaccination-card-icon {
+        width: 100%;
+
+        height: 85px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .vaccination-card-main {
+        padding: 24px 20px;
+    }
+
+    .vaccination-card-top {
+        flex-direction: column;
+    }
+
+    .vaccination-card-details {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 18px 12px;
+    }
+
+    .vaccination-card-actions {
+        flex-direction: column;
+    }
+
+    .edit-document-button,
+    .delete-document-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   DOCUMENT VAULT PAGE
+========================================================= */
+
+.documents-vault-page {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.documents-vault-header {
+    margin-bottom: 28px;
+}
+
+.documents-vault-header h1 {
+    margin: 0 0 8px;
+
+    color: #111827;
+
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.documents-vault-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   UPLOAD CARD
+========================================================= */
+
+.document-upload-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    margin-bottom: 38px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #111936 0%,
+        #1c2552 55%,
+        #252d60 100%
+    );
+
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.16);
+}
+
+.document-upload-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -100px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.document-upload-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+.vault-banner-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a5b4fc;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.document-upload-header h2 {
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.document-upload-header p {
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.document-upload-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 28px;
+}
+
+.document-upload-card .form-group label {
+    color: #cbd5e1;
+}
+
+.document-upload-card .form-group input,
+.document-upload-card .form-group select {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    color: #ffffff;
+}
+
+.document-upload-card .form-group input:focus,
+.document-upload-card .form-group select:focus {
+    border-color: #818cf8;
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+.document-upload-card select option {
+    color: #111827;
+
+    background: #ffffff;
+}
+
+.document-upload-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.document-upload-actions {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 22px;
+}
+
+.document-upload-actions .add-document-button {
+    min-width: 170px;
+}
+
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.selected-document {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    margin-top: 18px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #e2e8f0;
+
+    font-size: 13px;
+}
+
+.selected-document strong {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   UPLOADED DOCUMENT SECTION
+========================================================= */
+
+.uploaded-documents-section {
+    margin-bottom: 38px;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+.section-heading > span {
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.documents-loading {
+    padding: 45px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   DOCUMENT GRID
+========================================================= */
+
+.uploaded-document-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.uploaded-document-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 300px;
+
+    padding: 23px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 17px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.uploaded-document-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.11);
+}
+
+.uploaded-document-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.uploaded-document-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+
+    font-size: 22px;
+}
+
+.uploaded-document-card h3 {
+    margin: 0 0 18px;
+
+    color: #172033;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+.uploaded-document-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #eef0f4;
+
+    border-bottom: 1px solid #eef0f4;
+}
+
+.uploaded-document-info span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.uploaded-document-info strong {
+    color: #334155;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.uploaded-document-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: auto;
+
+    padding-top: 18px;
+}
+
+.view-document-button {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 8px 14px;
+
+    border-radius: 9px;
+
+    background: #eef2ff;
+
+    color: #3730a3;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.view-document-button:hover {
+    background: #e0e7ff;
+}
+
+.uploaded-document-actions .delete-document-button {
+    min-height: 38px;
+}
+
+
+/* =========================================================
+   VAULT BANNER
+========================================================= */
+
+.document-vault-banner {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 28px;
+
+    margin-bottom: 32px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #312e81
+    );
+
+    box-shadow: 0 12px 30px rgba(30, 41, 59, 0.14);
+}
+
+.vault-banner-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    font-size: 26px;
+}
+
+.vault-banner-content {
+    flex: 1;
+}
+
+.document-vault-banner .vault-banner-label {
+    margin-bottom: 5px;
+}
+
+.vault-banner-content h2 {
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+.vault-banner-content p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.vault-dashboard-button {
+    flex-shrink: 0;
+
+    padding: 10px 17px;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #1e1b4b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.vault-dashboard-button:hover {
+    background: #f1f5f9;
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.document-category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 32px;
+}
+
+.document-vault-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 220px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.document-vault-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 13px 30px rgba(15, 23, 42, 0.10);
+}
+
+.document-vault-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 12px;
+
+    background: #f1f5f9;
+
+    font-size: 23px;
+}
+
+.document-vault-card-content {
+    flex: 1;
+}
+
+.document-vault-card-content h2 {
+    margin: 0 0 8px;
+
+    color: #172033;
+
+    font-size: 17px;
+}
+
+.document-vault-card-content p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.document-vault-card-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 17px;
+
+    margin-top: 17px;
+
+    border-top: 1px solid #eef0f4;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.document-arrow {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.document-feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    padding-bottom: 25px;
+}
+
+.document-feature-card {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+}
+
+.document-feature-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #ecfdf5;
+
+    color: #047857;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.document-feature-icon.reminder-feature {
+    background: #fff7ed;
+}
+
+.document-feature-icon.travel-feature {
+    background: #eff6ff;
+}
+
+.document-feature-card h3 {
+    margin: 0 0 6px;
+
+    color: #172033;
+
+    font-size: 14px;
+}
+
+.document-feature-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DOCUMENT VAULT RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .document-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .uploaded-document-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .document-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .documents-vault-page {
+        padding: 22px;
+    }
+
+    .document-upload-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-vault-banner {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .vault-dashboard-button {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .documents-vault-page {
+        padding: 16px;
+    }
+
+    .documents-vault-header h1 {
+        font-size: 26px;
+    }
+
+    .document-upload-card {
+        padding: 22px;
+    }
+
+    .document-upload-header {
+        align-items: flex-start;
+    }
+
+    .document-upload-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+    .uploaded-document-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .document-vault-banner {
+        flex-direction: column;
+    }
+
+    .vault-dashboard-button {
+        margin-left: 0;
+    }
+
+    .document-upload-actions {
+        justify-content: stretch;
+    }
+
+    .document-upload-actions .add-document-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   REMINDERS PAGE
+========================================================= */
+
+.reminders-page {
+    padding: 30px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.reminder-form-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.reminder-form-card h2 {
+    margin: 0 0 22px;
+
+    color: #172033;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.reminder-form-card form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.reminder-form-card .form-group:nth-child(2) {
+    grid-column: 1 / -1;
+}
+
+.reminder-form-card textarea {
+    min-height: 95px;
+
+    resize: vertical;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: flex-end;
+
+    padding-top: 5px;
+}
+
+.reminder-submit-button,
+.reminder-cancel-button {
+    min-height: 40px;
+
+    padding: 9px 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.reminder-submit-button {
+    background: #312e81;
+
+    color: #ffffff;
+}
+
+.reminder-submit-button:hover {
+    background: #3730a3;
+}
+
+.reminder-cancel-button {
+    background: #f1f5f9;
+
+    color: #475569;
+}
+
+.reminder-cancel-button:hover {
+    background: #e2e8f0;
+}
+
+
+/* =========================================================
+   REMINDER SECTION
+========================================================= */
+
+.reminders-section {
+    margin-bottom: 35px;
+}
+
+.reminders-section-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.reminders-section-header h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   REMINDER LIST
+========================================================= */
+
+.reminders-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.reminder-page-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.reminder-page-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.reminder-page-card.completed {
+    opacity: 0.72;
+
+    background: #f8fafc;
+}
+
+.reminder-page-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    flex: 1;
+}
+
+.reminder-page-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+
+    font-size: 21px;
+}
+
+.reminder-page-content h3 {
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+.reminder-page-content p {
+    margin: 0 0 7px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.reminder-page-content .reminder-date {
+    color: #475569;
+
+    font-weight: 600;
+}
+
+.reminder-type-badge,
+.reminder-completed-badge {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    margin-right: 7px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+}
+
+.reminder-type-badge {
+    background: #eef2ff;
+
+    color: #3730a3;
+}
+
+.reminder-completed-badge {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+/* =========================================================
+   REMINDER ACTIONS
+========================================================= */
+
+.reminder-page-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.reminder-action-button {
+    min-height: 36px;
+
+    padding: 8px 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.reminder-complete-button {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+.reminder-complete-button:hover {
+    background: #bbf7d0;
+}
+
+.reminder-edit-button {
+    background: #eef2ff;
+
+    color: #3730a3;
+}
+
+.reminder-edit-button:hover {
+    background: #e0e7ff;
+}
+
+.reminder-delete-button {
+    background: #fef2f2;
+
+    color: #b91c1c;
+}
+
+.reminder-delete-button:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.reminder-empty-state {
+    padding: 50px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 17px;
+}
+
+.reminder-empty-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border-radius: 15px;
+
+    background: #eef2ff;
+
+    font-size: 26px;
+}
+
+.reminder-empty-state h3 {
+    margin: 0 0 7px;
+
+    color: #172033;
+
+    font-size: 18px;
+}
+
+.reminder-empty-state p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   REMINDER PREFERENCES
+========================================================= */
+
+.reminder-preferences {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-preferences h2 {
+    margin: 0 0 7px;
+
+    color: #172033;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+.reminder-preferences > p {
+    margin: 0 0 22px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.reminder-preferences-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+.reminder-preference-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 15px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+}
+
+.reminder-preference-item input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #312e81;
+
+    cursor: pointer;
+}
+
+.reminder-preference-item label {
+    color: #334155;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.reminder-save-button {
+    min-height: 40px;
+
+    padding: 9px 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #312e81;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.reminder-save-button:hover {
+    background: #3730a3;
+}
+
+.reminder-save-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REMINDER RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .reminder-preferences-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reminder-page-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .reminder-page-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .reminders-page {
+        padding: 18px;
+    }
+
+    .reminder-form-card,
+    .reminder-preferences {
+        padding: 20px;
+    }
+
+    .reminder-form-card form {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-form-card .form-group:nth-child(2) {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        grid-column: auto;
+
+        flex-direction: column;
+    }
+
+    .reminder-submit-button,
+    .reminder-cancel-button {
+        width: 100%;
+    }
+
+    .reminder-preferences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-page-actions {
+        flex-wrap: wrap;
+    }
+
+    .reminder-action-button {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   TRAVEL HISTORY
+========================================================= */
+
+.travel-history-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.travel-history-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.travel-page-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #6366f1;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.travel-history-header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.travel-history-header p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.travel-form-card {
+    padding: 28px;
+    margin-bottom: 36px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 19px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.travel-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.travel-form-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 21px;
+}
+
+.travel-form-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.travel-form-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: #eef2ff;
+    font-size: 25px;
+}
+
+.travel-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.travel-notes-group {
+    grid-column: 1 / -1;
+}
+
+.travel-notes-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.travel-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.travel-history-section {
+    margin-bottom: 40px;
+}
+
+.travel-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.travel-section-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 23px;
+}
+
+.travel-record-count {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TRAVEL RECORD CARD
+========================================================= */
+
+.travel-record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.travel-record-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 17px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.travel-record-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 30px rgba(15, 23, 42, 0.09);
+}
+
+.travel-record-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.travel-destination {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.travel-destination-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #fff7ed;
+    font-size: 25px;
+}
+
+.travel-destination h3 {
+    margin: 0;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.travel-destination p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.travel-record-badge {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.travel-record-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.travel-record-details span,
+.travel-record-notes > span {
+    display: block;
+    margin-bottom: 6px;
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.travel-record-details strong {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.travel-record-notes {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.travel-record-notes p {
+    margin: 0;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.travel-record-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #eef0f4;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.travel-empty-state {
+    padding: 50px 25px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 17px;
+}
+
+.travel-empty-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 15px;
+    background: #fff7ed;
+    font-size: 27px;
+}
+
+.travel-empty-state h3 {
+    margin: 0 0 7px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.travel-empty-state p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .travel-history-page {
+        padding: 22px;
+    }
+
+    .travel-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-notes-group {
+        grid-column: auto;
+    }
+
+    .travel-record-details {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .travel-history-page {
+        padding: 16px;
+    }
+
+    .travel-history-header {
+        flex-direction: column;
+    }
+
+    .travel-history-header .add-document-button {
+        width: 100%;
+    }
+
+    .travel-form-card {
+        padding: 20px;
+    }
+
+    .travel-record-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .travel-record-details {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-record-actions {
+        flex-direction: column;
+    }
+
+    .travel-record-actions button {
+        width: 100%;
+    }
+
+    .travel-form-actions {
+        flex-direction: column;
+    }
+
+    .travel-form-actions button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   DESTINATION CHECKLIST
+========================================================= */
+
+.checklist-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.checklist-page .documents-header {
+    margin-bottom: 25px;
+}
+
+.checklist-page .documents-header h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 32px;
+    font-weight: 750;
+}
+
+.checklist-page .documents-header p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.checklist-search {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.checklist-search input {
+    flex: 1;
+    min-width: 0;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checklist-search input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+.checklist-search button {
+    height: 48px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checklist-search button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================================
+   RESULTS HEADER
+========================================================= */
+
+.checklist-results {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 19px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.checklist-results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.checklist-results-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.checklist-results-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.checklist-progress-summary {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding: 10px 15px;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    background: #eff6ff;
+    white-space: nowrap;
+}
+
+.checklist-progress-summary strong {
+    color: #2563eb;
+    font-size: 22px;
+}
+
+.checklist-progress-summary span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.checklist-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.checklist-progress-bar {
+    flex: 1;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e2e8f0;
+}
+
+.checklist-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.checklist-progress-container > span {
+    min-width: 85px;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* =========================================================
+   CHECKLIST ITEMS
+========================================================= */
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    background: #ffffff;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.checklist-item:hover {
+    transform: translateY(-1px);
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.checklist-item.completed {
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+.checklist-item-content {
+    flex: 1;
+}
+
+.checklist-item-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.checklist-item.completed
+.checklist-item-content label {
+    color: #15803d;
+    text-decoration: line-through;
+}
+
+.checklist-item-content p {
+    margin: 0 0 9px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.checklist-category {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   COMPLETION MESSAGE
+========================================================= */
+
+.checklist-complete-message {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    background: #f0fdf4;
+    color: #15803d;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .checklist-page {
+        padding: 20px;
+    }
+
+    .checklist-search {
+        flex-direction: column;
+    }
+
+    .checklist-search button {
+        width: 100%;
+    }
+
+    .checklist-results {
+        padding: 20px;
+    }
+
+    .checklist-results-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .checklist-progress-summary {
+        align-self: flex-start;
+    }
+
+    .checklist-progress-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .checklist-progress-bar {
+        width: 100%;
+    }
+
+    .checklist-progress-container > span {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .checklist-page {
+        padding: 15px;
+    }
+
+    .checklist-page .documents-header h1 {
+        font-size: 27px;
+    }
+
+    .checklist-item {
+        padding: 15px;
+    }
+}
+
+/* =========================================================
+   DASHBOARD - FINAL PROFESSIONAL DESIGN
+========================================================= */
+
+.dashboard {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ALERT BANNER
+========================================================= */
+
+.dashboard-alert-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+    padding: 13px 17px;
+
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f97316;
+
+    border-radius: 10px;
+
+    color: #9a3412;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.dashboard-alert-banner strong {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dashboard-alert-banner button {
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    color: #c2410c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dashboard-alert-banner button:hover {
+    color: #9a3412;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.dashboard-welcome {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    min-height: 225px;
+
+    padding: 34px 38px;
+
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101735 0%,
+            #171f4b 48%,
+            #293268 100%
+        );
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.18);
+
+    box-sizing: border-box;
+}
+
+.dashboard-welcome::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    right: -130px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.dashboard-welcome::after {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    right: 150px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.12);
+}
+
+.dashboard-welcome-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+.dashboard-profile-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(165, 180, 252, 0.22);
+    border-radius: 20px;
+
+    background: rgba(165, 180, 252, 0.10);
+
+    color: #c7d2fe;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    letter-spacing: -0.02em;
+}
+
+.dashboard-welcome p {
+    max-width: 690px;
+
+    margin: 0;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.dashboard-welcome-actions {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 175px;
+}
+
+.dashboard-refresh-button,
+.dashboard-ai-button {
+    min-height: 43px;
+
+    padding: 11px 17px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.dashboard-refresh-button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.dashboard-refresh-button:hover {
+    background: rgba(255, 255, 255, 0.14);
+
+    transform: translateY(-1px);
+}
+
+.dashboard-ai-button {
+    border: 1px solid rgba(165, 180, 252, 0.35);
+
+    background: #6366f1;
+
+    color: #ffffff;
+}
+
+.dashboard-ai-button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   KPI CARDS
+========================================================= */
+
+.dashboard-kpi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.dashboard-kpi-card {
+    min-width: 0;
+
+    padding: 21px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.dashboard-kpi-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard-kpi-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.dashboard-kpi-top > span {
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.dashboard-kpi-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-kpi-icon.success {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.dashboard-kpi-icon.warning {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.dashboard-kpi-icon.danger {
+    background: #fff1f2;
+    color: #e11d48;
+}
+
+.dashboard-kpi-number {
+    margin-bottom: 8px;
+
+    color: #0f172a;
+
+    font-size: 32px;
+    line-height: 1;
+
+    font-weight: 750;
+
+    letter-spacing: -0.03em;
+}
+
+.dashboard-kpi-number.success-text {
+    color: #059669;
+}
+
+.dashboard-kpi-number.warning-text {
+    color: #d97706;
+}
+
+.dashboard-kpi-number.danger-text {
+    color: #e11d48;
+}
+
+.dashboard-kpi-card p {
+    min-height: 38px;
+
+    margin: 10px 0 14px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.dashboard-kpi-link {
+    display: inline-block;
+
+    color: #4f46e5;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.dashboard-kpi-link:hover {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.dashboard-status-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.dashboard-status-badge.success {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.dashboard-status-badge.warning {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.dashboard-status-badge.danger {
+    background: #fff1f2;
+    color: #be123c;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD GRID
+========================================================= */
+
+.dashboard-main-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(360px, 0.9fr);
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   DASHBOARD PANEL
+========================================================= */
+
+.dashboard-panel {
+    min-width: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.045);
+
+    box-sizing: border-box;
+}
+
+.dashboard-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 4px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dashboard-panel-header h2 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 17px;
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+.dashboard-panel-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.dashboard-panel-header button {
+    flex-shrink: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.dashboard-panel-header button:hover {
+    color: #4338ca;
+}
+
+
+/* =========================================================
+   EXPIRY ALERT LIST
+========================================================= */
+
+.dashboard-alert-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 17px;
+}
+
+.dashboard-alert-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    border-radius: 11px;
+
+    border: 1px solid #e2e8f0;
+
+    background: #f8fafc;
+}
+
+.dashboard-alert-item.expiring {
+    border-left: 3px solid #f59e0b;
+}
+
+.dashboard-alert-item.expired {
+    border-left: 3px solid #ef4444;
+
+    background: #fffafa;
+}
+
+.dashboard-alert-info {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+}
+
+.dashboard-alert-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.dashboard-alert-item.expired .dashboard-alert-icon {
+    background: #fff1f2;
+    color: #e11d48;
+}
+
+.dashboard-alert-info h3 {
+    margin: 0 0 3px;
+
+    color: #0f172a;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-alert-info span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #6366f1;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+}
+
+.dashboard-alert-info p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.dashboard-alert-item > button {
+    flex-shrink: 0;
+
+    padding: 8px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.dashboard-alert-item > button:hover {
+    border-color: #6366f1;
+
+    color: #4f46e5;
+
+    background: #f8faff;
+}
+
+
+/* =========================================================
+   EMPTY STATES
+========================================================= */
+
+.dashboard-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 270px;
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+.dashboard-empty > div {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: #ecfdf5;
+
+    color: #059669;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.dashboard-empty h3 {
+    margin: 0 0 6px;
+
+    color: #0f172a;
+
+    font-size: 15px;
+}
+
+.dashboard-empty p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SCHENGEN PANEL
+========================================================= */
+
+.schengen-panel {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fafbff 100%
+        );
+}
+
+.schengen-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 19px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.schengen-title {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.schengen-title > div:first-child {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    font-size: 20px;
+}
+
+.schengen-title h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    font-weight: 700;
+}
+
+.schengen-title p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.schengen-header button {
+    padding: 8px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.schengen-header button:hover {
+    border-color: #6366f1;
+
+    background: #f8faff;
+}
+
+.schengen-placeholder {
+    padding-top: 25px;
+}
+
+.schengen-days {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+.schengen-days span {
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.schengen-days strong {
+    color: #0f172a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: right;
+}
+
+.schengen-progress {
+    width: 100%;
+    height: 11px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e2e8f0;
+}
+
+.schengen-progress-bar {
+    height: 100%;
+
+    min-width: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #818cf8
+        );
+
+    transition: width 0.4s ease;
+}
+
+.schengen-scale {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+.schengen-status {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 22px;
+
+    padding: 12px;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 9px;
+
+    background: #eff6ff;
+
+    color: #1e40af;
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.schengen-status > span:first-child {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.schengen-simulate {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px 14px;
+
+    border: 1px solid #c7d2fe;
+
+    border-radius: 8px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.schengen-simulate:hover {
+    background: #e0e7ff;
+
+    border-color: #a5b4fc;
+}
+
+
+/* =========================================================
+   DESTINATION ENTRY RULES
+========================================================= */
+
+.dashboard-destination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 24px;
+
+    padding: 24px 27px;
+
+    border-radius: 16px;
+
+    border: 1px solid #dbeafe;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff 0%,
+            #eef2ff 100%
+        );
+
+    box-sizing: border-box;
+}
+
+.dashboard-destination h2 {
+    margin: 0 0 6px;
+
+    color: #172554;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-destination p {
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.dashboard-destination button {
+    flex-shrink: 0;
+
+    padding: 11px 17px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.dashboard-destination button:hover {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   REMINDERS
+========================================================= */
+
+.dashboard-reminder-panel {
+    margin-bottom: 30px;
+}
+
+.dashboard-reminder-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 16px;
+}
+
+.dashboard-reminder-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 15px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+}
+
+.dashboard-reminder-item:hover {
+    background: #f1f5f9;
+}
+
+.dashboard-reminder-item h3 {
+    margin: 0 0 4px;
+
+    color: #0f172a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dashboard-reminder-item p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dashboard-reminder-item > span {
+    flex-shrink: 0;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.dashboard-empty-small {
+    padding: 35px 20px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DASHBOARD RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .dashboard-kpi-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-welcome {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .dashboard {
+        padding: 22px;
+    }
+
+    .dashboard-welcome {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px;
+    }
+
+    .dashboard-welcome-actions {
+        width: 100%;
+
+        flex-direction: row;
+    }
+
+    .dashboard-refresh-button,
+    .dashboard-ai-button {
+        flex: 1;
+    }
+
+    .dashboard-alert-banner {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .dashboard-alert-banner button {
+        width: 100%;
+
+        margin-left: 0;
+
+        text-align: left;
+    }
+
+    .dashboard-destination {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dashboard-destination button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .dashboard {
+        padding: 16px;
+    }
+
+    .dashboard-welcome {
+        padding: 24px 20px;
+
+        border-radius: 16px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 27px;
+    }
+
+    .dashboard-welcome p {
+        font-size: 12px;
+    }
+
+    .dashboard-welcome-actions {
+        flex-direction: column;
+    }
+
+    .dashboard-kpi-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .dashboard-kpi-card {
+        padding: 18px;
+    }
+
+    .dashboard-kpi-card p {
+        min-height: auto;
+    }
+
+    .dashboard-panel {
+        padding: 19px;
+    }
+
+    .dashboard-panel-header {
+        flex-direction: column;
+    }
+
+    .dashboard-panel-header button {
+        align-self: flex-start;
+    }
+
+    .dashboard-alert-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dashboard-alert-item > button {
+        width: 100%;
+    }
+
+    .dashboard-alert-info {
+        width: 100%;
+    }
+
+    .schengen-header {
+        flex-direction: column;
+    }
+
+    .schengen-header button {
+        width: 100%;
+    }
+
+    .schengen-days {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .schengen-days strong {
+        text-align: left;
+    }
+
+    .dashboard-reminder-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .dashboard-reminder-item > span {
+        align-self: flex-start;
+    }
+
+    .dashboard-destination {
+        padding: 21px;
+
+        border-radius: 14px;
+    }
+}
+/* =========================================================
+   PASSPORT PAGE - REFERENCE STYLE
+========================================================= */
+
+.passport-section {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.passport-card-wrapper {
+    position: relative;
+
+    display: flex;
+
+    min-height: 270px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 55%,
+            #1e3a5f 100%
+        );
+
+    box-shadow:
+        0 16px 35px rgba(15, 23, 42, 0.15);
+}
+
+.passport-card-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    right: -130px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.passport-card-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 80px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.06);
+}
+
+.passport-card-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: #f5d77a;
+
+    font-size: 48px;
+}
+
+.passport-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 30px;
+}
+
+.passport-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.passport-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #f5d77a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.passport-card-top h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+}
+
+.passport-card-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding: 23px 0;
+}
+
+.passport-card-details > div {
+    min-width: 0;
+}
+
+.passport-card-details span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+.passport-card-details strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.passport-card-actions {
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 4px;
+}
+
+.edit-document-button,
+.delete-document-button {
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.edit-document-button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.edit-document-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.delete-document-button {
+    border: 1px solid rgba(248, 113, 113, 0.35);
+
+    background: rgba(239, 68, 68, 0.08);
+
+    color: #fca5a5;
+}
+
+.delete-document-button:hover {
+    background: rgba(239, 68, 68, 0.16);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PASSPORT STATUS
+========================================================= */
+
+.document-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+}
+
+.document-status.valid {
+    background: rgba(16, 185, 129, 0.15);
+
+    border: 1px solid rgba(52, 211, 153, 0.25);
+
+    color: #6ee7b7;
+}
+
+.document-status.expiring {
+    background: rgba(245, 158, 11, 0.15);
+
+    border: 1px solid rgba(251, 191, 36, 0.25);
+
+    color: #fcd34d;
+}
+
+.document-status.expired {
+    background: rgba(239, 68, 68, 0.15);
+
+    border: 1px solid rgba(248, 113, 113, 0.25);
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   PASSPORT FORM
+========================================================= */
+
+.document-form-card {
+    margin-top: 24px;
+
+    padding: 26px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.document-form-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.document-form-header h2 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.document-form-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.form-close-button {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+.form-close-button:hover {
+    background: #f8fafc;
+
+    color: #0f172a;
+}
+
+.passport-form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 19px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #334155;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.10);
+}
+
+.document-form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #f1f5f9;
+}
+
+.cancel-button,
+.save-document-button {
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+
+    color: #475569;
+}
+
+.cancel-button:hover {
+    background: #f8fafc;
+}
+
+.save-document-button {
+    border: none;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+}
+
+.save-document-button:hover {
+    background: #4338ca;
+}
+
+
+/* =========================================================
+   PASSPORT MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .passport-card-wrapper {
+        flex-direction: column;
+    }
+
+    .passport-card-icon {
+        width: 100%;
+        height: 85px;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .passport-card-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .passport-card-main {
+        padding: 22px 20px;
+    }
+
+    .passport-card-top {
+        flex-direction: column;
+    }
+
+    .passport-card-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .passport-card-actions {
+        flex-direction: column;
+    }
+
+    .edit-document-button,
+    .delete-document-button {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-form-card {
+        padding: 20px;
+    }
+
+    .document-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-button,
+    .save-document-button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   VISA PAGE - PROFESSIONAL REFERENCE STYLE
+========================================================= */
+
+.visa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.visa-card {
+    position: relative;
+
+    display: flex;
+    min-height: 255px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 55%,
+            #1e3a5f 100%
+        );
+
+    box-shadow:
+        0 14px 32px rgba(15, 23, 42, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.visa-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 38px rgba(15, 23, 42, 0.19);
+}
+
+.visa-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -130px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.visa-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    right: 100px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.06);
+}
+
+
+/* =========================================================
+   VISA ICON
+========================================================= */
+
+.visa-card-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: #f5d77a;
+
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   VISA MAIN
+========================================================= */
+
+.visa-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 27px 30px;
+}
+
+.visa-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.visa-card-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #f5d77a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.visa-card-top h2 {
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.visa-type-text {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   VISA DETAILS
+========================================================= */
+
+.visa-card-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding: 21px 0;
+}
+
+.visa-card-details > div {
+    min-width: 0;
+}
+
+.visa-card-details span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+.visa-card-details strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VISA ACTIONS
+========================================================= */
+
+.visa-card-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.visa-card-actions .edit-document-button,
+.visa-card-actions .delete-document-button {
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.visa-card-actions .edit-document-button {
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.visa-card-actions .edit-document-button:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+.visa-card-actions .delete-document-button {
+    border:
+        1px solid rgba(248, 113, 113, 0.35);
+
+    background:
+        rgba(239, 68, 68, 0.08);
+
+    color: #fca5a5;
+}
+
+.visa-card-actions .delete-document-button:hover {
+    background:
+        rgba(239, 68, 68, 0.16);
+}
+
+
+/* =========================================================
+   VISA STATUS
+========================================================= */
+
+.visa-card .document-status.valid {
+    background:
+        rgba(16, 185, 129, 0.15);
+
+    border:
+        1px solid rgba(52, 211, 153, 0.25);
+
+    color: #6ee7b7;
+}
+
+.visa-card .document-status.expiring {
+    background:
+        rgba(245, 158, 11, 0.15);
+
+    border:
+        1px solid rgba(251, 191, 36, 0.25);
+
+    color: #fcd34d;
+}
+
+.visa-card .document-status.expired,
+.visa-card .document-status.cancelled {
+    background:
+        rgba(239, 68, 68, 0.15);
+
+    border:
+        1px solid rgba(248, 113, 113, 0.25);
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   VISA FORM
+========================================================= */
+
+.visa-form {
+    width: 100%;
+}
+
+.visa-form .form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 19px;
+}
+
+
+/* =========================================================
+   VISA MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .visa-card {
+        flex-direction: column;
+    }
+
+    .visa-card-icon {
+        width: 100%;
+        height: 80px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .visa-card-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .visa-card-main {
+        padding: 22px 20px;
+    }
+
+    .visa-card-top {
+        flex-direction: column;
+    }
+
+    .visa-card-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .visa-card-actions {
+        flex-direction: column;
+    }
+
+    .visa-card-actions button {
+        width: 100%;
+    }
+
+    .visa-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   INSURANCE PAGE - PROFESSIONAL REFERENCE STYLE
+========================================================= */
+
+.insurance-card {
+    position: relative;
+
+    display: flex;
+
+    min-height: 285px;
+
+    margin-top: 24px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 55%,
+            #1e3a5f 100%
+        );
+
+    box-shadow:
+        0 16px 35px rgba(15, 23, 42, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.insurance-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 19px 40px rgba(15, 23, 42, 0.19);
+}
+
+.insurance-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+    height: 340px;
+
+    right: -140px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.insurance-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: 90px;
+    bottom: -145px;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.06);
+}
+
+
+/* =========================================================
+   INSURANCE ICON
+========================================================= */
+
+.insurance-card-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: #f5d77a;
+
+    font-size: 45px;
+}
+
+
+/* =========================================================
+   INSURANCE MAIN
+========================================================= */
+
+.insurance-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 30px;
+}
+
+.insurance-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 19px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.insurance-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #f5d77a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.insurance-card-top h2 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.insurance-card-top p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   INSURANCE DETAILS
+========================================================= */
+
+.insurance-card-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding: 21px 0;
+}
+
+.insurance-card-details > div {
+    min-width: 0;
+}
+
+.insurance-card-details span,
+.insurance-coverage span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+.insurance-card-details strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   COVERAGE
+========================================================= */
+
+.insurance-coverage {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+}
+
+.insurance-coverage span {
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+.insurance-coverage strong {
+    color: #e2e8f0;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   INSURANCE ACTIONS
+========================================================= */
+
+.insurance-card-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.insurance-card-actions .edit-document-button {
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.insurance-card-actions .edit-document-button:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+.insurance-card-actions .delete-document-button {
+    border:
+        1px solid rgba(248, 113, 113, 0.35);
+
+    background:
+        rgba(239, 68, 68, 0.08);
+
+    color: #fca5a5;
+}
+
+.insurance-card-actions .delete-document-button:hover {
+    background:
+        rgba(239, 68, 68, 0.16);
+}
+
+
+/* =========================================================
+   INSURANCE STATUS
+========================================================= */
+
+.insurance-card .document-status.valid {
+    background:
+        rgba(16, 185, 129, 0.15);
+
+    border:
+        1px solid rgba(52, 211, 153, 0.25);
+
+    color: #6ee7b7;
+}
+
+.insurance-card .document-status.expiring {
+    background:
+        rgba(245, 158, 11, 0.15);
+
+    border:
+        1px solid rgba(251, 191, 36, 0.25);
+
+    color: #fcd34d;
+}
+
+.insurance-card .document-status.expired {
+    background:
+        rgba(239, 68, 68, 0.15);
+
+    border:
+        1px solid rgba(248, 113, 113, 0.25);
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   INSURANCE RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .insurance-card {
+        flex-direction: column;
+    }
+
+    .insurance-card-icon {
+        width: 100%;
+        height: 82px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .insurance-card-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .insurance-card-main {
+        padding: 22px 20px;
+    }
+
+    .insurance-card-top {
+        flex-direction: column;
+    }
+
+    .insurance-card-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .insurance-coverage {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .insurance-card-actions {
+        flex-direction: column;
+    }
+
+    .insurance-card-actions button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   VACCINATIONS PAGE - PROFESSIONAL REFERENCE STYLE
+========================================================= */
+
+.vaccination-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.vaccination-card {
+    position: relative;
+    display: flex;
+    min-height: 285px;
+    overflow: hidden;
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 55%,
+            #1e3a5f 100%
+        );
+
+    box-shadow:
+        0 14px 32px rgba(15, 23, 42, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.vaccination-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 38px rgba(15, 23, 42, 0.19);
+}
+
+.vaccination-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -130px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+.vaccination-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 100px;
+    bottom: -135px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.06);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.vaccination-card-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    color: #f5d77a;
+
+    font-size: 43px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.vaccination-card-main {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 28px 30px;
+}
+
+
+/* =========================================================
+   TOP SECTION
+========================================================= */
+
+.vaccination-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.vaccination-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #f5d77a;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.vaccination-card-top h2 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.vaccination-certificate-text {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.vaccination-card-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding: 21px 0;
+}
+
+.vaccination-card-details > div {
+    min-width: 0;
+}
+
+.vaccination-card-details span,
+.vaccination-validity span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+}
+
+.vaccination-card-details strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VALIDITY
+========================================================= */
+
+.vaccination-validity {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+}
+
+.vaccination-validity span {
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+.vaccination-validity strong {
+    color: #e2e8f0;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.vaccination-card-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.vaccination-card-actions .edit-document-button {
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.vaccination-card-actions .edit-document-button:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+.vaccination-card-actions .delete-document-button {
+    border:
+        1px solid rgba(248, 113, 113, 0.35);
+
+    background:
+        rgba(239, 68, 68, 0.08);
+
+    color: #fca5a5;
+}
+
+.vaccination-card-actions .delete-document-button:hover {
+    background:
+        rgba(239, 68, 68, 0.16);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.vaccination-card .document-status.valid {
+    background:
+        rgba(16, 185, 129, 0.15);
+
+    border:
+        1px solid rgba(52, 211, 153, 0.25);
+
+    color: #6ee7b7;
+}
+
+.vaccination-card .document-status.expiring {
+    background:
+        rgba(245, 158, 11, 0.15);
+
+    border:
+        1px solid rgba(251, 191, 36, 0.25);
+
+    color: #fcd34d;
+}
+
+.vaccination-card .document-status.expired {
+    background:
+        rgba(239, 68, 68, 0.15);
+
+    border:
+        1px solid rgba(248, 113, 113, 0.25);
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .vaccination-card {
+        flex-direction: column;
+    }
+
+    .vaccination-card-icon {
+        width: 100%;
+        height: 82px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .vaccination-card-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .vaccination-card-main {
+        padding: 22px 20px;
+    }
+
+    .vaccination-card-top {
+        flex-direction: column;
+    }
+
+    .vaccination-card-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .vaccination-validity {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .vaccination-card-actions {
+        flex-direction: column;
+    }
+
+    .vaccination-card-actions button {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   TRAVEL DOCUMENT VAULT - PROFESSIONAL REFERENCE STYLE
+========================================================= */
+
+.documents-vault-page {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.documents-vault-header {
+    margin-bottom: 28px;
+}
+
+.documents-vault-header h1 {
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+
+.documents-vault-header p {
+    margin: 0;
+
+    max-width: 720px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   UPLOAD CARD
+========================================================= */
+
+.document-upload-card {
+    position: relative;
+
+    margin-bottom: 34px;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827 0%,
+            #172554 55%,
+            #1e3a5f 100%
+        );
+
+    box-shadow:
+        0 16px 35px rgba(15, 23, 42, 0.15);
+}
+
+.document-upload-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -130px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+.document-upload-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: 90px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.06);
+}
+
+.document-upload-header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+.document-upload-header h2 {
+    margin: 5px 0 5px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.document-upload-header p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.document-upload-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   BANNER LABEL
+========================================================= */
+
+.vault-banner-label {
+    display: block;
+
+    color: #f5d77a;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   UPLOAD GRID
+========================================================= */
+
+.document-upload-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.document-upload-card .form-group label {
+    color: #cbd5e1;
+}
+
+.document-upload-card .form-group input,
+.document-upload-card .form-group select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 43px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.document-upload-card .form-group input:focus,
+.document-upload-card .form-group select:focus {
+    border-color: rgba(245, 215, 122, 0.65);
+
+    background:
+        rgba(255, 255, 255, 0.10);
+}
+
+.document-upload-card .form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.document-upload-card .form-group select option {
+    background: #172554;
+    color: #ffffff;
+}
+
+.document-file-input input[type="file"] {
+    padding: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SELECTED FILE
+========================================================= */
+
+.selected-document {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+}
+
+.selected-document strong {
+    flex: 1;
+
+    color: #ffffff;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   UPLOAD ACTIONS
+========================================================= */
+
+.document-upload-actions {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 22px;
+}
+
+.document-upload-actions .add-document-button {
+    min-width: 150px;
+}
+
+
+/* =========================================================
+   UPLOADED DOCUMENT SECTION
+========================================================= */
+
+.uploaded-documents-section {
+    margin-bottom: 38px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin: 5px 0 0;
+
+    color: #0f172a;
+
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.section-heading > span {
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.documents-loading {
+    padding: 35px;
+
+    text-align: center;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   UPLOADED DOCUMENT GRID
+========================================================= */
+
+.uploaded-document-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.uploaded-document-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 20px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.uploaded-document-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 13px 30px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   DOCUMENT TOP
+========================================================= */
+
+.uploaded-document-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.uploaded-document-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+
+    font-size: 22px;
+}
+
+.uploaded-document-card h3 {
+    margin: 0 0 17px;
+
+    color: #0f172a;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DOCUMENT INFO
+========================================================= */
+
+.uploaded-document-info {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+
+    margin-bottom: 19px;
+}
+
+.uploaded-document-info > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 9px;
+
+    border-bottom:
+        1px solid #f1f5f9;
+}
+
+.uploaded-document-info span {
+    color: #94a3b8;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.07em;
+}
+
+.uploaded-document-info strong {
+    max-width: 60%;
+
+    color: #334155;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-align: right;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DOCUMENT ACTIONS
+========================================================= */
+
+.uploaded-document-actions {
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: auto;
+}
+
+.view-document-button,
+.uploaded-document-actions .delete-document-button {
+    flex: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 37px;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.view-document-button {
+    border:
+        1px solid #dbeafe;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+.view-document-button:hover {
+    background: #dbeafe;
+}
+
+.uploaded-document-actions .delete-document-button {
+    border:
+        1px solid #fecaca;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.uploaded-document-actions .delete-document-button:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================================
+   DOCUMENT STATUS
+========================================================= */
+
+.uploaded-document-card .document-status.valid {
+    background: #ecfdf5;
+
+    border:
+        1px solid #a7f3d0;
+
+    color: #047857;
+}
+
+.uploaded-document-card .document-status.expiring {
+    background: #fffbeb;
+
+    border:
+        1px solid #fde68a;
+
+    color: #b45309;
+}
+
+.uploaded-document-card .document-status.expired {
+    background: #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   VAULT BANNER
+========================================================= */
+
+.document-vault-banner {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+
+    padding: 25px 28px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e3a5f
+        );
+
+    box-shadow:
+        0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.document-vault-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -100px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+.vault-banner-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    font-size: 24px;
+}
+
+.vault-banner-content {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+}
+
+.vault-banner-content h2 {
+    margin: 5px 0 5px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vault-banner-content p {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.vault-dashboard-button {
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    padding: 10px 16px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.vault-dashboard-button:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.document-category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 17px;
+
+    margin-bottom: 35px;
+}
+
+.document-vault-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 205px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.document-vault-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbd5e1;
+
+    box-shadow:
+        0 14px 30px rgba(15, 23, 42, 0.10);
+}
+
+.document-vault-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    font-size: 22px;
+}
+
+.document-vault-card-content {
+    flex: 1;
+}
+
+.document-vault-card-content h2 {
+    margin: 0 0 7px;
+
+    color: #0f172a;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.document-vault-card-content p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+.document-vault-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid #f1f5f9;
+
+    color: #475569;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.document-arrow {
+    font-size: 17px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.document-vault-card:hover .document-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CATEGORY ACCENTS
+========================================================= */
+
+.passport-category .document-vault-icon {
+    background: #eff6ff;
+}
+
+.visa-category .document-vault-icon {
+    background: #f5f3ff;
+}
+
+.insurance-category .document-vault-icon {
+    background: #ecfdf5;
+}
+
+.vaccination-category .document-vault-icon {
+    background: #fff7ed;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.document-feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding-bottom: 20px;
+}
+
+.document-feature-card {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 19px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.document-feature-icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #ecfdf5;
+
+    color: #059669;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.document-feature-icon.reminder-feature {
+    background: #fffbeb;
+}
+
+.document-feature-icon.travel-feature {
+    background: #eff6ff;
+}
+
+.document-feature-card h3 {
+    margin: 0 0 5px;
+
+    color: #0f172a;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.document-feature-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .document-category-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .uploaded-document-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .document-upload-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+
+    .document-upload-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-vault-banner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .documents-vault-header h1 {
+        font-size: 25px;
+    }
+
+    .document-upload-card {
+        padding: 21px 18px;
+    }
+
+    .document-upload-header {
+        flex-direction: column;
+    }
+
+    .document-upload-icon {
+        display: none;
+    }
+
+    .uploaded-document-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-vault-banner {
+        padding: 21px 18px;
+    }
+
+    .vault-dashboard-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .document-upload-actions {
+        justify-content: stretch;
+    }
+
+    .document-upload-actions button {
+        width: 100%;
+    }
+
+    .selected-document {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================================================
+   REMINDERS PAGE
+   Professional Reference Style
+========================================================= */
+
+.reminders-page {
+    width: 100%;
+    padding: 28px;
+    background: #f5f7fb;
+    min-height: calc(100vh - 70px);
+}
+
+/* PAGE HEADER */
+
+.reminders-page .documents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.reminders-page .documents-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.reminders-page .documents-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.reminders-page .primary-button {
+    border: none;
+    background: linear-gradient(135deg, #0f2747, #183b67);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(15, 39, 71, 0.18);
+    transition: 0.2s ease;
+}
+
+.reminders-page .primary-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(15, 39, 71, 0.25);
+}
+
+/* MESSAGES */
+
+.reminders-page .error-message,
+.reminders-page .success-message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.reminders-page .error-message {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.reminders-page .success-message {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+/* FORM CARD */
+
+.reminder-form-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.reminder-form-card h2 {
+    margin: 0 0 22px;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.reminder-form-card form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.reminder-form-card .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reminder-form-card .form-group:nth-child(2) {
+    grid-column: span 2;
+}
+
+.reminder-form-card label {
+    margin-bottom: 7px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.reminder-form-card input,
+.reminder-form-card textarea,
+.reminder-form-card select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #0f172a;
+    padding: 11px 13px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.reminder-form-card textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.reminder-form-card input:focus,
+.reminder-form-card textarea:focus,
+.reminder-form-card select:focus {
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.08);
+}
+
+.reminder-form-card input::placeholder,
+.reminder-form-card textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* FORM BUTTONS */
+
+.reminder-form-card .form-actions {
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.reminder-submit-button,
+.reminder-cancel-button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reminder-submit-button {
+    background: #0f2747;
+    color: white;
+}
+
+.reminder-submit-button:hover {
+    background: #183b67;
+    transform: translateY(-1px);
+}
+
+.reminder-cancel-button {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.reminder-cancel-button:hover {
+    background: #cbd5e1;
+}
+
+/* REMINDER SECTION */
+
+.reminders-section {
+    margin-bottom: 30px;
+}
+
+.reminders-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.reminders-section-header h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #0f172a;
+    font-weight: 750;
+}
+
+/* REMINDER LIST */
+
+.reminders-list {
+    display: grid;
+    gap: 14px;
+}
+
+/* REMINDER CARD */
+
+.reminder-page-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #d4a72c;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 3px 14px rgba(15, 23, 42, 0.04);
+    transition: 0.2s ease;
+}
+
+.reminder-page-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.reminder-page-card.completed {
+    border-left-color: #16a34a;
+    background: #f8fafc;
+    opacity: 0.88;
+}
+
+.reminder-page-card-top {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.reminder-page-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff8df;
+    font-size: 20px;
+}
+
+.reminder-page-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.reminder-page-content h3 {
+    margin: 0 0 6px;
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.reminder-page-content p {
+    margin: 0 0 9px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.reminder-page-content .reminder-date {
+    color: #334155;
+    font-weight: 600;
+}
+
+.reminder-type-badge,
+.reminder-completed-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-right: 7px;
+    margin-top: 3px;
+}
+
+.reminder-type-badge {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.reminder-completed-badge {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+/* ACTIONS */
+
+.reminder-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 14px;
+    border-top: 1px solid #eef2f7;
+}
+
+.reminder-action-button {
+    border: none;
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reminder-complete-button {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.reminder-complete-button:hover {
+    background: #bbf7d0;
+}
+
+.reminder-edit-button {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.reminder-edit-button:hover {
+    background: #dbeafe;
+}
+
+.reminder-delete-button {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.reminder-delete-button:hover {
+    background: #fee2e2;
+}
+
+/* EMPTY STATE */
+
+.reminder-empty-state {
+    background: white;
+    border: 1px dashed #cbd5e1;
+    border-radius: 14px;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.reminder-empty-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #fff8df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.reminder-empty-state h3 {
+    margin: 0 0 7px;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.reminder-empty-state p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* PREFERENCES */
+
+.reminder-preferences {
+    background: linear-gradient(135deg, #0f2747, #173d6b);
+    border-radius: 14px;
+    padding: 26px;
+    color: white;
+    box-shadow: 0 8px 24px rgba(15, 39, 71, 0.16);
+}
+
+.reminder-preferences h2 {
+    margin: 0 0 7px;
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.reminder-preferences > p {
+    margin: 0 0 20px;
+    color: #dbeafe;
+    font-size: 13px;
+}
+
+.reminder-preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reminder-preference-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9px;
+}
+
+.reminder-preference-item input {
+    width: 17px;
+    height: 17px;
+    accent-color: #d4a72c;
+    cursor: pointer;
+}
+
+.reminder-preference-item label {
+    color: #f8fafc;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reminder-save-button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    background: #d4a72c;
+    color: #0f2747;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reminder-save-button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+.reminder-save-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .reminders-page {
+        padding: 20px;
+    }
+
+    .reminder-form-card form {
+        grid-template-columns: 1fr;
+    }
+
+    .reminder-form-card .form-group:nth-child(2),
+    .reminder-form-card .form-actions {
+        grid-column: span 1;
+    }
+
+    .reminder-preferences-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .reminders-page {
+        padding: 15px;
+    }
+
+    .reminders-page .documents-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reminders-page .primary-button {
+        width: 100%;
+    }
+
+    .reminder-page-card-top {
+        gap: 10px;
+    }
+
+    .reminder-page-actions {
+        flex-direction: column;
+    }
+
+    .reminder-action-button {
+        width: 100%;
+    }
+
+    .reminder-preferences {
+        padding: 20px;
+    }
+
+    .reminder-save-button {
+        width: 100%;
+    }
+}
